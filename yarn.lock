@@ -18423,13 +18423,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18, @types/react@npm:^18.2.6":
+"@types/react@npm:*, @types/react@npm:^18":
   version: 18.3.19
   resolution: "@types/react@npm:18.3.19"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10/4b40a4adf7a59390541dc24059c09d95a777e8e8025fab13d660e1929a88e78efadde8ec94ebd357c5cc80b25590645e81c5b621661700f40496e7833b3d2983
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^19.2.7":
+  version: 19.2.7
+  resolution: "@types/react@npm:19.2.7"
+  dependencies:
+    csstype: "npm:^3.2.2"
+  checksum: 10/dc0b756eee2c9782d282ae47eaa8d537b2a569eb889a6808c4b172d70fb690b2b1d8fe6239db451aa1c90d2a947cc21c9b537ce177ba9e6121468e403e4079c5
   languageName: node
   linkType: hard
 
@@ -24577,6 +24586,13 @@ __metadata:
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10/f593cce41ff5ade23f44e77521e3a1bcc2c64107041e1bf6c3c32adc5187d0d60983292fda326154d20b01079e24931aa5b08e4467cc488b60bb1e7f6d478ade
+  languageName: node
+  linkType: hard
+
+"csstype@npm:^3.2.2":
+  version: 3.2.3
+  resolution: "csstype@npm:3.2.3"
+  checksum: 10/ad41baf7e2ffac65ab544d79107bf7cd1a4bb9bab9ac3302f59ab4ba655d5e30942a8ae46e10ba160c6f4ecea464cc95b975ca2fefbdeeacd6ac63f12f99fe1f
   languageName: node
   linkType: hard
 
@@ -34151,7 +34167,7 @@ __metadata:
     "@types/node": "npm:^20.12.8"
     "@types/pako": "npm:^2.0.4"
     "@types/qs": "npm:^6.9.15"
-    "@types/react": "npm:^18.2.6"
+    "@types/react": "npm:^19.2.7"
     "@types/react-native-background-timer": "npm:^2.0.0"
     "@types/react-native-elevated-view": "npm:^0.0.4"
     "@types/react-native-material-textfield": "npm:^0.16.5"
@@ -34283,7 +34299,7 @@ __metadata:
     qs: "npm:6.12.1"
     query-string: "npm:^6.12.1"
     randomfill: "npm:^1.0.4"
-    react: "npm:18.3.1"
+    react: "npm:19.2.1"
     react-compiler-runtime: "npm:^19.1.0-rc.2"
     react-dom: "npm:18.2.0"
     react-native: "patch:react-native@npm%3A0.76.9#~/.yarn/patches/react-native-npm-0.76.9-1c25352097.patch"
@@ -39531,7 +39547,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.3.1, react@npm:^18.2.0, react@npm:^18.3.1":
+"react@npm:19.2.1":
+  version: 19.2.1
+  resolution: "react@npm:19.2.1"
+  checksum: 10/7c7ab0f40b98e87e1466bea8c28564c5f3c384506cbda93d24788d32b40bf6059c991687c7e90a396b11f09223a779a81b1188af9acd839aaa0a672987c13107
+  languageName: node
+  linkType: hard
+
+"react@npm:^18.2.0, react@npm:^18.3.1":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:
