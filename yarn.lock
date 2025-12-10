@@ -9568,10 +9568,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@metamask/test-dapp@npm:9.5.0":
-  version: 9.5.0
-  resolution: "@metamask/test-dapp@npm:9.5.0"
-  checksum: 10/38d88f93bcaa9fe79a619d0fbaf676dd9d006baa0b0db14f0b2d41019502f94fd90744e5e023d206a7384a498aa6ea5998bf772534a97f4ab4d8c10f97a07681
+"@metamask/test-dapp@npm:9.7.0":
+  version: 9.7.0
+  resolution: "@metamask/test-dapp@npm:9.7.0"
+  checksum: 10/5e29fed5d4f80243cd07aed49db6578e99ae7e2dc606f7704267f523fe1bfe89fd26b372cc968a6344514a4d01c35f4c9917acb8b6e1f6398cbcf49452623b1b
   languageName: node
   linkType: hard
 
@@ -34080,7 +34080,7 @@ __metadata:
     "@metamask/stake-sdk": "npm:^3.2.0"
     "@metamask/swappable-obj-proxy": "npm:^2.1.0"
     "@metamask/swaps-controller": "npm:^15.0.0"
-    "@metamask/test-dapp": "npm:9.5.0"
+    "@metamask/test-dapp": "npm:9.7.0"
     "@metamask/test-dapp-multichain": "npm:^0.17.1"
     "@metamask/test-dapp-solana": "npm:^0.3.0"
     "@metamask/token-search-discovery-controller": "npm:^4.0.0"
